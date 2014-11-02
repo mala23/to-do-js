@@ -48,7 +48,7 @@ var taskCompleted = function() {
 
 //Mark a task as incomplete
 var taskIncomplete = function() {
-  conosle.log('Task incomplete...');
+  console.log('Task incomplete...');
   //When the checkbox is unchecked
     //Append the task list item to the #incomplete-tasks
 };
@@ -59,8 +59,13 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   var checkBox = taskListItem.querySelector('input[type=checkbox]');
   var editButton = taskListItem.querySelector('button.edit');
   var deleteButton = taskListItem.querySelector('button.delete');
-
   
+  //bind editTask to edit button
+  editButton.onclick = editTask;
+    //bind deleteTask to delete button
+    deleteButton.onclick = deleteTask;
+    //bind checkBoxEventHandler to checkbox
+    checkBox.onchange = checkBoxEventHandler;
 };
 
 //Set the click handler to the addTask function
