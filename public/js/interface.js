@@ -1,6 +1,11 @@
 //Problem: User interaction doesn't provide desired results.
 //Solution: Add behaviour so the user can manage daily task.
 
+var taskInput = document.getElementByID('new-task'); // new-task
+var addButton; // first button
+var incompleteTasksHolder = document.getElementByID('incomplete-tasks'); // incomplete-tasks
+var completedTasksHolder = document.getElementByID('completed-tasks'); // completed-tasks
+
 //Add a new task
 var addTask = function() {
   //When the user clicks on the button
